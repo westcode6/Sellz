@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@300;400;500&display=swap');@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500&family=Montserrat:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+
+  scroll-behavior: smooth;
+}
+
+
+body {
+  /* background-image: url("./assets/cool.webp"); */
+  background-color: #F5F7F2;
+  background-position: bottom bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+
+.hero-cover {
+    background-image: url("./assets/bg-round.jpg");
+    background-color: #F5F7F2;
+    background-position: bottom, center;
+    background-size: contain;
+    background-repeat: repeat;
+    /* background-attachment: fixed; */
+}
+
+/* =====Heading=== */
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ScoreboardGrid Default Settings */
+.grid {
+  list-style-type: none;
+  margin: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+/* ======GlassUI */
+.glass-effect {
+  background: #313131;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(0px);
+  border: 1px solid rgba(34, 33, 33, 0)
+}
+
+.glass-effect-light {
+  background: rgba(69, 66, 66, 0.31);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(3px);
+  border: 1px dotted rgba(44, 41, 41, 0.068);
+}
+
+
+.bg-gradient {
+  background: #f50742;
+  background: linear-gradient(to bottom right, #04e2ff 40%, #f40bfc 75%);
+}
+.gradient-logo {
+  background: #f50742;
+  background: linear-gradient(to bottom right, #04e2ff 40%, #f40bfc 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.text-gray-gradient {
+  background: #d7d7d7;
+  background: -webkit-linear-gradient(210deg, #2b0101 0%, #eeeeee 100%);
+  background: linear-gradient(210deg, #b0acac 50%, #eeeeee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
