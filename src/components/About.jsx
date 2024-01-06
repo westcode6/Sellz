@@ -11,10 +11,11 @@ export const ServiceCard = ({ index, title, content, icon }) => {
   return (
     // <Tilt className="xs:w-[210px] bg-dark glass-effect w-full  rounded-xl">
 
+   
     <motion.div
-      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+    variants={fadeIn("right", "spring", 0.5 * index, 0.75)}//
       // animation pattern
-      className="w-[340px] max-h-[360px]"
+      className="w-[320px] mx-auto mb-10 max-h-[360px]"
     >
       {/* The Tilt options are coming into this div */}
       <div
@@ -23,13 +24,13 @@ export const ServiceCard = ({ index, title, content, icon }) => {
           scale: 1,
           speed: 450,
         }}
-        className="w-full shadow-sm hover:shadow transform transition  duration-300  rounded-2xl flex flex-col  items-center text-center justify-evenly gap-2"
+        className="w-full bg-white shadow-xl hover:shadow transform transition  duration-300  rounded-2xl flex flex-col  items-center text-center justify-evenly gap-2"
       >
         <div className="w-28 ">
           <img src={icon} className="w-full object-contain obeject-center" alt="" />
         </div>
-        <h4 className="text-neutral-700 text-xl text-center font-bold">{title}</h4>
-        <p className="text-xl tracking-wide text-neutral-500 py-4 px-4">{content}</p>
+        <h4 className="text-neutral-700 text-xl text-center font-semibold">{title}</h4>
+        <p className="text-xl tracking-wide text-neutral-500 py-8 px-4">{content}</p>
         <Link to="/learn">
           <h4 className="text-base font-bold pb-8 text-green-900 flex items-center gap-4">
             Learn More
@@ -60,14 +61,14 @@ export const ServiceCard = ({ index, title, content, icon }) => {
   );
 };
 
-const About = () => {
+const About = ({index}) => {
   return (
     <>
       <div className={`bg-white lex flex-col  `}>
         {/* NOTE: that every motion effects must be passed as props in the motion tag */}
         <div>
         <motion.div
-            className="pt-10"
+            className="pt-16"
             variants={textVariant()} // textVariant() method is used to animate the texts
             // the vairiants prop is used to define what you're giving motion effects to
           >
@@ -76,18 +77,13 @@ const About = () => {
         </div>
 
         <div className="w-full  py-12 sm:py-20">
-          <motion.div
-            className="mb-10"
-            variants={textVariant()} // textVariant() method is used to animate the texts
-            // the vairiants prop is used to define what you're giving motion effects to
-          >
-           
+               
           <div className="w-full flex flex-col lg:flex-row  items-center justify-center px-4 gap-4 pb-10">
             {services.map((service, index) => (
               <ServiceCard key={service.title} index={index} {...service} />
             ))}
           </div>
-          </motion.div>
+         
 
         </div>
       </div>
@@ -95,4 +91,4 @@ const About = () => {
   );
 };
 
-export default About
+export default  SectionWrapper(About, "")
