@@ -15,7 +15,7 @@ export const ServiceCard = ({ index, title, content, icon }) => {
     <motion.div
     variants={fadeIn("right", "spring", 0.5 * index, 0.75)}//
       // animation pattern
-      className="w-[320px] mx-auto mb-10 max-h-[360px]"
+      className="w-full mb-10 max-h-[360px]"
     >
       {/* The Tilt options are coming into this div */}
       <div
@@ -26,11 +26,11 @@ export const ServiceCard = ({ index, title, content, icon }) => {
         }}
         className="w-full bg-white shadow-xl hover:shadow transform transition  duration-300  rounded-2xl flex flex-col  items-center text-center justify-evenly gap-2"
       >
-        <div className="w-28 ">
+        <div className="w-28 py-6">
           <img src={icon} className="w-full object-contain obeject-center" alt="" />
         </div>
         <h4 className="text-neutral-700 text-xl text-center font-semibold">{title}</h4>
-        <p className="text-xl tracking-wide text-neutral-500 py-8 px-4">{content}</p>
+        <p className="text-xl tracking-wide text-neutral-500 py-8 px-8">{content}</p>
         <Link to="/learn">
           <h4 className="text-base font-bold pb-8 text-green-900 flex items-center gap-4">
             Learn More
@@ -78,7 +78,7 @@ const About = ({index}) => {
 
         <div className="w-full  py-12 sm:py-20">
                
-          <div className="w-full flex flex-col lg:flex-row  items-center justify-center px-4 gap-4 pb-10">
+          <div className="w-full flex flex-col lg:flex-row  items-center justify-center px-10 gap-4 pb-10">
             {services.map((service, index) => (
               <ServiceCard key={service.title} index={index} {...service} />
             ))}
