@@ -37,7 +37,7 @@ const FeedbackCard = ({
             {testimonial}
           </p>
           <div className="w-full flex items-center mt-4 gap-2">
-            <h5 className="text-lg text-green-700 font-bold">{company}</h5>
+            <h5 className="text-lg text-[#176C66]  font-bold">{company}</h5>
 
             <h6 className="text-sm text-neutral-500 font-semibold">
               {designation}

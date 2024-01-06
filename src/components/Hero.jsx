@@ -5,7 +5,7 @@ function Hero() {
   return (
     <header className="w-full flex flex-col lg:flex-row  items-start justify-between gap-10 lg:gap-0">
       <div className=" w-full sm:max-w-2xl text-center lg:text-left px-2 pt-6">
-        <div className="w-60 h-20 sm:h-40  absolute top-4 sm:top-10 overflow-hidden">
+        <div className="w-60 h-20 sm:h-40  absolute top-10 sm:top-2 overflow-hidden">
           <img
             src="./assets/see4i.png"
             className="w-full object-cover object-center"
@@ -21,12 +21,12 @@ function Hero() {
           anywhere in the world and accept payments in any currency
         </p>
 
-        <div className="my-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-8">
-          <button className="px-6 py-4 text-xl font-bold bg-[#ffc83e]  text-neutral-700 capitalize tracking-wide rounded-full">
+        <div className="my-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+          <button className="px-6 py-4 text-xl font-semibold bg-[#ffc83e]  text-neutral-600 capitalize tracking-wide rounded-full">
             <a href="https://sellz.co/signup">Start Selling</a>
           </button>
 
-          <button className="px-6 py-4 text-lg font-bold bg-neutral-200 text-neutral-700 tracking-wide rounded-full">
+          <button className="px-6 py-4 text-lg font-semibold bg-neutral-200 text-neutral-700 tracking-wide rounded-full">
           <a href="https://sellz.co/login">Login</a>
           </button>
         </div>
@@ -40,7 +40,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="w-full sm:max-w-xl flex items-start justify-start">
+      <div className="w-full -mt-14 md:-mt-2 sm:max-w-xl flex items-start justify-start">
         <div className="w-full">
           <img
             src="./assets/inspo1.jpg"
