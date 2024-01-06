@@ -15,7 +15,7 @@ export const ServiceCard = ({ index, title, content, icon }) => {
     <motion.div
     variants={fadeIn("right", "spring", 0.5 * index, 0.75)}//
       // animation pattern
-      className="w-full max-h-[360px]"
+      className="w-full"
     >
       {/* The Tilt options are coming into this div */}
       <div
@@ -24,13 +24,13 @@ export const ServiceCard = ({ index, title, content, icon }) => {
           scale: 1,
           speed: 450,
         }}
-        className="w-full mt-10 border bg-white shadow-inner hover:shadow-sm transform transition  duration-300  rounded-2xl flex flex-col  items-center text-center justify-evenly gap-2"
+        className="w-full border bg-white shadow-inner hover:shadow-sm transform transition  duration-300  rounded-2xl flex flex-col  items-center text-center justify-evenly gap-2"
       >
         <div className="w-28 py-4">
           <img src={icon} className="w-full object-contain obeject-center" alt="" />
         </div>
         <h4 className="text-neutral-700 text-xl text-center font-semibold">{title}</h4>
-        <p className="text-xl tracking-wide text-neutral-500 py-4 px-8">{content}</p>
+        <p className="text-lg tracking-wide text-neutral-500 py-4 px-8">{content}</p>
         <Link to="/learn">
           <h4 className="text-base font-bold py-8 text-green-900 flex items-center gap-4">
             Learn More
