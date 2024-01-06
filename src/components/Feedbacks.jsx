@@ -17,7 +17,7 @@ const FeedbackCard = ({
     <>
       <motion.div
         variants={fadeIn("", "spring", index * 0.5, 0.75)}
-        className=" shadow-sm hover:shadow-xl bg-[#F5F7F2]  border-4 border-[#176C66] rounded-tl-3xl rounded-br-3xl px-10 py-4 md:p-10 w-full sm:w-[360px] h-fit"
+        className=" shadow-sm hover:shadow-xl bg-[#F5F7F2]  border-2 border-[#176C66] rounded-tl-3xl rounded-br-3xl px-10 py-4 md:p-10 w-full sm:w-[360px] h-fit"
       >
         <div className="flex items-center gap-2">
           <img
@@ -33,11 +33,11 @@ const FeedbackCard = ({
         </div>
         <span />
         <div className="flex flex-col items-start justify-start py-4">
-          <p className="text-base font-medium text-neutral-600">
+          <p className="text-base font-normal text-neutral-500">
             {testimonial}
           </p>
           <div className="w-full flex items-center mt-4 gap-2">
-            <h5 className="text-lg text-[#176C66]  font-bold">{company}</h5>
+            <h5 className="text-base text-[#176C66]  font-semibold">{company}</h5>
 
             <h6 className="text-sm text-neutral-500 font-semibold">
               {designation}
@@ -58,13 +58,15 @@ const Feedbacks = () => {
             {" "}
             Lets Hear What Are The Customer Saying.
           </h2>
-        </motion.div>
 
+          
         <img
           src="./assets/see5.jpeg"
-          className="w-60 h-20 ml-10 lg:ml-52 object-cover object-center"
+          className="w-40 h-20 ml-10 lg:ml-52 object-cover object-center"
           alt=""
         />
+        </motion.div>
+
       </div>
 
       <div

@@ -5,7 +5,7 @@ function Hero() {
   return (
     <header className="w-full flex flex-col lg:flex-row  items-start justify-between gap-10 lg:gap-0">
       <div className=" w-full sm:max-w-2xl text-center lg:text-left px-2 pt-6">
-        <div className="w-60 h-20 sm:h-40  absolute top-10 sm:top-2 overflow-hidden">
+        <div className="w-60 h-20 sm:h-40  absolute top-0 sm:top-2 overflow-hidden">
           <img
             src="./assets/see4i.png"
             className="w-full object-cover object-center"
