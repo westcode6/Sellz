@@ -17,7 +17,7 @@ const FeedbackCard = ({
     <>
       <motion.div
         variants={fadeIn("", "spring", index * 0.5, 0.75)}
-        className=" shadow-2xl bg-[#F5F7F2]  border-4 border-[#176C66] rounded-tl-3xl rounded-br-3xl px-10 py-4 md:p-10 w-full sm:w-[360px] h-fit"
+        className=" shadow-sm hover:shadow-xl bg-[#F5F7F2]  border-4 border-[#176C66] rounded-tl-3xl rounded-br-3xl px-10 py-4 md:p-10 w-full sm:w-[360px] h-fit"
       >
         <div className="flex items-center gap-2">
           <img
@@ -37,9 +37,9 @@ const FeedbackCard = ({
             {testimonial}
           </p>
           <div className="w-full flex items-center mt-4 gap-2">
-            <h5 className="text-xl text-green-700 font-bold">{company}</h5>
+            <h5 className="text-lg text-green-700 font-bold">{company}</h5>
 
-            <h6 className="text-sm text-neutral-600 font-semibold">
+            <h6 className="text-sm text-neutral-500 font-semibold">
               {designation}
             </h6>
           </div>
@@ -54,7 +54,7 @@ const Feedbacks = () => {
     <div className={`rounded-2xl  relative`}>
       <div className={`w-full`}>
         <motion.div variants={textVariant()} className="w-full">
-          <h2 className="w-full sm:max-w-2xl leading-normal mx-auto text-5xl text-neutral-700 text-center  font-bold">
+          <h2 className="w-full sm:max-w-2xl leading-normal mx-auto text-3xl sm:text-4xl lg:text-5xl text-neutral-700 text-center  font-bold">
             {" "}
             Lets Hear What Are The Customer Saying.
           </h2>

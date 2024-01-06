@@ -57,42 +57,37 @@ export function FeatureCard({ img, title, desc, index }) {
 
 function Features() {
   return (
-    <section className="bg-[#197771] text-white rounded-2xl w-full flex py-20 ">
+    <section className="bg-[#197771] text-white w-full flex py-20 ">
       <div className="w-full ">
         <div className="w-full sm:px-8 lg:px-12  flex flex-col lg:flex-row items-center justify-between">
           <motion.div
-            className="w-full"
-            variants={textVariant()} 
+            className="w-full p-2"
+            variants={textVariant()}
             // textVariant() method is used to animate the texts
             // the vairiants prop is used to define what you're giving motion effects to
           >
-           
+            <div >
+              <h2 className="w-full sm:max-w-2xl leading-normal mx-auto text-3xl sm:text-4xl lg:text-5xl text-neutral-50 text-center  font-bold">
+                {" "}
+                We provide best service for your business
+              </h2>
 
-            <div>
-            <h2 className="w-full sm:max-w-2xl lg:leading-normal mx-auto text-5xl text-white text-center  font-bold">
-              {" "}
-              We provide best service for your business
-            </h2>
-
-            <div className="w-full md:max-w-xl mx-auto block lg:hidden">
-            <img src="./assets/sellz-db.png" className="mt-10" alt="" />
-
+              <div className="w-full md:max-w-xl mx-auto block lg:hidden">
+                <img src="./assets/sellz-db.png" className="mt-10" alt="" />
+              </div>
             </div>
-
-            </div>
-            
-        <div className="w-full pt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 ">
-          {whyUs.map((service, index) => (
-            <FeatureCard key={service.title} index={index} {...service} />
-          ))}
-        </div>
           </motion.div>
-          
-        </div>
 
+
+            <div className="w-full pt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 ">
+              {whyUs.map((service, index) => (
+                <FeatureCard key={service.title} index={index} {...service} />
+              ))}
+            </div>
+        </div>
       </div>
     </section>
   );
 }
 
-export default SectionWrapper(Features, "");
+export default Features

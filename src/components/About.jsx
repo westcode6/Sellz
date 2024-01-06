@@ -14,7 +14,7 @@ export const ServiceCard = ({ index, title, content, icon }) => {
     <motion.div
       variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
       // animation pattern
-      className="w-full sm:w-96 h-fit"
+      className="w-[340px] max-h-[360px]"
     >
       {/* The Tilt options are coming into this div */}
       <div
@@ -23,15 +23,15 @@ export const ServiceCard = ({ index, title, content, icon }) => {
           scale: 1,
           speed: 450,
         }}
-        className="w-full bg-white border-2 shadow-xl hover:shadow transform transition  duration-300   p-6 rounded-2xl flex flex-col  items-center text-center justify-evenly gap-2"
+        className="w-full shadow-sm hover:shadow transform transition  duration-300  rounded-2xl flex flex-col  items-center text-center justify-evenly gap-2"
       >
-        <div className="w-32 h-32">
+        <div className="w-28 ">
           <img src={icon} className="w-full object-contain obeject-center" alt="" />
         </div>
         <h4 className="text-neutral-700 text-xl text-center font-bold">{title}</h4>
-        <p className="text-xl tracking-wide text-neutral-500 py-6 px-8">{content}</p>
+        <p className="text-xl tracking-wide text-neutral-500 py-4 px-4">{content}</p>
         <Link to="/learn">
-          <h4 className="text-base font-bold my-6 text-green-900 flex items-center gap-4">
+          <h4 className="text-base font-bold pb-8 text-green-900 flex items-center gap-4">
             Learn More
             <span>
               <svg
@@ -63,7 +63,7 @@ export const ServiceCard = ({ index, title, content, icon }) => {
 const About = () => {
   return (
     <>
-      <div className={`bg-white lex flex-col -mt-20 `}>
+      <div className={`bg-white lex flex-col  `}>
         {/* NOTE: that every motion effects must be passed as props in the motion tag */}
         <div>
         <motion.div
@@ -71,7 +71,7 @@ const About = () => {
             variants={textVariant()} // textVariant() method is used to animate the texts
             // the vairiants prop is used to define what you're giving motion effects to
           >
-            <h2 className="text-3xl sm:text-5xl text-neutral-800 text-center pt-10 font-bold">All Solution In One Platform</h2>
+            <h2 className="w-full sm:max-w-2xl leading-normal mx-auto text-3xl sm:text-4xl lg:text-5xl text-neutral-700 text-center  font-bold">All Solution In One Platform</h2>
           </motion.div>
         </div>
 
@@ -81,15 +81,14 @@ const About = () => {
             variants={textVariant()} // textVariant() method is used to animate the texts
             // the vairiants prop is used to define what you're giving motion effects to
           >
-            {/* <h2 className="bg-primary">Chech the color here</h2> */}
-    
-          </motion.div>
-
+           
           <div className="w-full flex flex-col lg:flex-row  items-center justify-center px-4 gap-4 pb-10">
             {services.map((service, index) => (
               <ServiceCard key={service.title} index={index} {...service} />
             ))}
           </div>
+          </motion.div>
+
         </div>
       </div>
     </>
