@@ -64,7 +64,7 @@ export const ServiceCard = ({ index, title, content, icon }) => {
 const About = ({index}) => {
   return (
     <>
-      <div className={`bg-white lex flex-col  `}>
+      <div className={`bg-[#F5F7F2] lex flex-col  `}>
         {/* NOTE: that every motion effects must be passed as props in the motion tag */}
         <div>
         <motion.div

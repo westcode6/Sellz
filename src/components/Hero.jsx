@@ -3,7 +3,7 @@ import { SectionWrapper } from "../hoc";
 
 function Hero() {
   return (
-    <header className="w-full flex flex-col lg:flex-row  items-start justify-between gap-10 lg:gap-0">
+    <header className="w-full  flex flex-col lg:flex-row  items-start justify-between gap-10 lg:gap-0">
       <div className=" w-full sm:max-w-2xl text-center lg:text-left px-2 pt-6">
         <div className="w-60 h-20 sm:h-40  absolute top-0 sm:top-2 overflow-hidden">
           <img
