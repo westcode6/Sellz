@@ -24,15 +24,15 @@ export const ServiceCard = ({ index, title, content, icon }) => {
           scale: 1,
           speed: 450,
         }}
-        className="w-full mt-10  bg-white shadow-xl hover:shadow transform transition  duration-300  rounded-2xl flex flex-col  items-center text-center justify-evenly gap-2"
+        className="w-full mt-10 border bg-white shadow-inner hover:shadow-2xl transform transition  duration-300  rounded-2xl flex flex-col  items-center text-center justify-evenly gap-2"
       >
-        <div className="w-28 py-6">
+        <div className="w-28 py-4">
           <img src={icon} className="w-full object-contain obeject-center" alt="" />
         </div>
         <h4 className="text-neutral-700 text-xl text-center font-semibold">{title}</h4>
-        <p className="text-xl tracking-wide text-neutral-500 py-8 px-8">{content}</p>
+        <p className="text-xl tracking-wide text-neutral-500 py-4 px-8">{content}</p>
         <Link to="/learn">
-          <h4 className="text-base font-bold pb-8 text-green-900 flex items-center gap-4">
+          <h4 className="text-base font-bold py-8 text-green-900 flex items-center gap-4">
             Learn More
             <span>
               <svg
@@ -78,7 +78,7 @@ const About = ({index}) => {
 
         <div className="w-full  py-12 sm:py-20">
                
-          <div className="w-full flex flex-col lg:flex-row  items-center justify-center px-5 gap-4 pb-10">
+          <div className="w-full flex flex-col lg:flex-row  items-center justify-center px-5 gap-10 pb-10">
             {services.map((service, index) => (
               <ServiceCard key={service.title} index={index} {...service} />
             ))}
