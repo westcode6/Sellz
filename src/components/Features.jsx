@@ -13,7 +13,7 @@ export function FeatureCard({ img, title, desc, index }) {
           className="w-full sm:max-w-lg "
           variants={fadeIn("down", "spring", 5 * index, 0.75)}
         >
-          <div className="w-[85%]  px-6 py-4   bg-[#197771] shadow-2xl hover:shadow-inner rounded-tr-3xl rounded-bl-3xl">
+          <div className="w-full  px-6 py-2  bg-[#197771] shadow-2xl hover:shadow-inner rounded-tr-3xl rounded-bl-3xl">
             <div className="w-16 overflow-hidden p-1 shadow-xl">
               <img
                 src={img}
@@ -66,8 +66,8 @@ function Features() {
             // textVariant() method is used to animate the texts
             // the vairiants prop is used to define what you're giving motion effects to
           >
-            <div className="pt-20">
-              <h2 className="w-full sm:max-w-2xl leading-normal mx-auto text-3xl sm:text-4xl lg:text-5xl text-neutral-50 text-center  font-bold">
+            <div className="pt-6 lg:pt-20">
+              <h2 className="w-full sm:max-w-2xl leading-snug mx-auto text-3xl sm:text-4xl lg:text-5xl text-neutral-50 text-center  font-bold">
                 {" "}
                 We provide best service for your business
               </h2>
@@ -79,7 +79,7 @@ function Features() {
           </motion.div>
 
 
-            <div className="w-full px-4 py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 ">
+            <div className="w-full px-4 py-8 sm:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 ">
               {whyUs.map((service, index) => (
                 <FeatureCard key={service.title} index={index} {...service} />
               ))}
